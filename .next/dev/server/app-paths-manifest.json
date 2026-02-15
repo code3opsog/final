@@ -1,0 +1,16 @@
+{
+  "/admin/page": "app/admin/page.js",
+  "/api/admin/analytics/route": "app/api/admin/analytics/route.js",
+  "/api/admin/logs/route": "app/api/admin/logs/route.js",
+  "/api/admin/settings/route": "app/api/admin/settings/route.js",
+  "/api/admin/users/route": "app/api/admin/users/route.js",
+  "/api/avatars/route": "app/api/avatars/route.js",
+  "/api/cron/auto-fetch/route": "app/api/cron/auto-fetch/route.js",
+  "/api/filter/add-followers/route": "app/api/filter/add-followers/route.js",
+  "/api/filter/cached/route": "app/api/filter/cached/route.js",
+  "/api/filter/logs/route": "app/api/filter/logs/route.js",
+  "/api/user/me/route": "app/api/user/me/route.js",
+  "/api/user/roblox/route": "app/api/user/roblox/route.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/page": "app/page.js"
+}

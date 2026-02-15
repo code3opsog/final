@@ -1,0 +1,3 @@
+{
+  "/api/filter/decline-all-requests/route": "app/api/filter/decline-all-requests/route.js"
+}

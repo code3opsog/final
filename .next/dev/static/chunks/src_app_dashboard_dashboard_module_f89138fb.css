@@ -1,0 +1,1254 @@
+/* [project]/src/app/dashboard/dashboard.module.css [app-client] (css) */
+.dashboard-module__XABe8G__container {
+  background: linear-gradient(135deg, #0a0a0f 0%, #0d1117 50%, #161b22 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.dashboard-module__XABe8G__container:before {
+  content: "";
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(circle at 20% 20%, #5865f214 0%, #0000 50%), radial-gradient(circle at 80% 80%, #7289da0f 0%, #0000 50%), radial-gradient(circle, #43b5810a 0%, #0000 50%);
+  width: 200%;
+  height: 200%;
+  animation: 20s ease-in-out infinite dashboard-module__XABe8G__bgOrbs;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+}
+
+@keyframes dashboard-module__XABe8G__bgOrbs {
+  0%, 100% {
+    transform: translate(0)rotate(0);
+  }
+
+  25% {
+    transform: translate(-2%, 2%)rotate(90deg);
+  }
+
+  50% {
+    transform: translate(2%, -2%)rotate(180deg);
+  }
+
+  75% {
+    transform: translate(-1%, -1%)rotate(270deg);
+  }
+}
+
+.dashboard-module__XABe8G__toast {
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  animation: .5s cubic-bezier(.34, 1.56, .64, 1) dashboard-module__XABe8G__toastBounceIn;
+  display: flex;
+  position: fixed;
+  top: 24px;
+  right: 24px;
+}
+
+.dashboard-module__XABe8G__toast:before {
+  content: "";
+  background: currentColor;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  animation: 1s ease-in-out infinite dashboard-module__XABe8G__pulseDot;
+}
+
+@keyframes dashboard-module__XABe8G__pulseDot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .6;
+    transform: scale(.8);
+  }
+}
+
+.dashboard-module__XABe8G__toastSuccess {
+  color: #fff;
+  background: #43b581e6;
+  box-shadow: 0 8px 32px #43b58166, inset 0 1px #fff3, 0 0 0 1px #43b58180;
+}
+
+.dashboard-module__XABe8G__toastError {
+  color: #fff;
+  background: #f04747e6;
+  box-shadow: 0 8px 32px #f0474766, inset 0 1px #fff3, 0 0 0 1px #f0474780;
+}
+
+@keyframes dashboard-module__XABe8G__toastBounceIn {
+  0% {
+    opacity: 0;
+    transform: translateX(120%)scale(.8);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateX(-8%)scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0)scale(1);
+  }
+}
+
+.dashboard-module__XABe8G__nav {
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+  z-index: 100;
+  background: #0d1117b3;
+  border-bottom: 1px solid #ffffff0f;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 4px 30px #0000004d;
+}
+
+.dashboard-module__XABe8G__navBrand {
+  background: linear-gradient(135deg, #5865f2 0%, #7289da 50%, #43b581 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 24px;
+  font-weight: 700;
+  animation: 3s ease-in-out infinite dashboard-module__XABe8G__brandGlow;
+}
+
+@keyframes dashboard-module__XABe8G__brandGlow {
+  0%, 100% {
+    filter: brightness();
+  }
+
+  50% {
+    filter: brightness(1.2);
+  }
+}
+
+.dashboard-module__XABe8G__navRight {
+  align-items: center;
+  gap: 24px;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__adminLink {
+  color: #faa61a;
+  background: #faa61a1a;
+  border: 1px solid #faa61a33;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.dashboard-module__XABe8G__adminLink:hover {
+  background: #faa61a33;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px #faa61a33;
+}
+
+.dashboard-module__XABe8G__userInfo {
+  color: #a0a0b0;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__avatar {
+  border: 2px solid #5865f280;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  transition: all .3s;
+}
+
+.dashboard-module__XABe8G__avatar:hover {
+  border-color: #5865f2;
+  transform: scale(1.1);
+}
+
+.dashboard-module__XABe8G__logoutBtn {
+  color: #f04747;
+  cursor: pointer;
+  background: #f047471a;
+  border: 1px solid #f0474733;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  transition: all .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.dashboard-module__XABe8G__logoutBtn:hover {
+  background: #f0474733;
+  transform: translateY(-2px);
+}
+
+.dashboard-module__XABe8G__main {
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+  position: relative;
+}
+
+.dashboard-module__XABe8G__section {
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  opacity: 0;
+  background: #161b2299;
+  border: 1px solid #ffffff14;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  padding: 28px;
+  transition: all .4s cubic-bezier(.4, 0, .2, 1);
+  animation: .6s cubic-bezier(.34, 1.56, .64, 1) forwards dashboard-module__XABe8G__sectionSlideIn;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px #0000004d, inset 0 1px #ffffff0d;
+}
+
+.dashboard-module__XABe8G__section:first-child {
+  animation-delay: .1s;
+}
+
+.dashboard-module__XABe8G__section:nth-child(2) {
+  animation-delay: .2s;
+}
+
+.dashboard-module__XABe8G__section:nth-child(3) {
+  animation-delay: .3s;
+}
+
+.dashboard-module__XABe8G__section:nth-child(4) {
+  animation-delay: .4s;
+}
+
+@keyframes dashboard-module__XABe8G__sectionSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-module__XABe8G__section:before {
+  content: "";
+  opacity: 0;
+  background: linear-gradient(90deg, #0000 0%, #00d4ff99 20%, #5865f2cc 40%, #a855f7cc 60%, #ec489999 80%, #0000 100%);
+  height: 2px;
+  transition: opacity .4s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: scaleX(.5);
+}
+
+.dashboard-module__XABe8G__section:after {
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 0 0, #00d4ff0d 0%, #0000 30%);
+  width: 200%;
+  height: 200%;
+  transition: opacity .4s;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+}
+
+.dashboard-module__XABe8G__section:hover:before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.dashboard-module__XABe8G__section:hover:after {
+  opacity: 1;
+}
+
+.dashboard-module__XABe8G__section:hover {
+  border-color: #5865f240;
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px #0006, 0 0 0 1px #5865f226, 0 0 40px #00d4ff0d;
+}
+
+.dashboard-module__XABe8G__sectionHeader {
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__stepNumber {
+  color: #fff;
+  background: linear-gradient(135deg, #5865f2 0%, #7289da 100%);
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__stepNumberAlt {
+  color: #a0a0b0;
+  background: #ffffff1a;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dashboard-module__XABe8G__sectionHeader h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.dashboard-module__XABe8G__sectionDesc {
+  color: #6b6b7b;
+  margin: 4px 0 0;
+  font-size: 13px;
+}
+
+.dashboard-module__XABe8G__sectionContent {
+  padding-left: 56px;
+}
+
+.dashboard-module__XABe8G__accountList {
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__accountCard {
+  cursor: pointer;
+  background: #ffffff08;
+  border: 1px solid #ffffff14;
+  border-radius: 12px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  transition: all .3s cubic-bezier(.34, 1.56, .64, 1);
+  display: flex;
+}
+
+.dashboard-module__XABe8G__accountCard:hover {
+  background: #ffffff0d;
+  transform: translateX(4px);
+}
+
+.dashboard-module__XABe8G__accountSelected {
+  background: #5865f21a;
+  border-color: #5865f2;
+  animation: .4s cubic-bezier(.34, 1.56, .64, 1) dashboard-module__XABe8G__selectPulse;
+  box-shadow: 0 0 20px #5865f233;
+}
+
+@keyframes dashboard-module__XABe8G__selectPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.dashboard-module__XABe8G__accountInfo {
+  align-items: center;
+  gap: 14px;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__accountAvatar {
+  background: #ffffff1a;
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+}
+
+.dashboard-module__XABe8G__accountName {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.dashboard-module__XABe8G__accountMeta {
+  color: #6b6b7b;
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.dashboard-module__XABe8G__accountProxy {
+  color: #5865f2;
+  opacity: .8;
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+.dashboard-module__XABe8G__btnRemove {
+  color: #f04747;
+  cursor: pointer;
+  background: #f047471a;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 12px;
+  transition: all .2s;
+}
+
+.dashboard-module__XABe8G__btnRemove:hover {
+  background: #f0474733;
+}
+
+.dashboard-module__XABe8G__btnSettings {
+  color: #a0a0b0;
+  cursor: pointer;
+  background: #5865f21a;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 16px;
+  transition: all .2s;
+}
+
+.dashboard-module__XABe8G__btnSettings:hover {
+  background: #5865f233;
+  transform: rotate(45deg);
+}
+
+.dashboard-module__XABe8G__autoFilterToggle {
+  color: #a0a0b0;
+  cursor: pointer;
+  background: #5865f21a;
+  border-radius: 6px;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: 11px;
+  transition: all .2s;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__autoFilterToggle:hover {
+  background: #5865f233;
+}
+
+.dashboard-module__XABe8G__autoFilterToggle input {
+  accent-color: #5865f2;
+  width: 14px;
+  height: 14px;
+}
+
+.dashboard-module__XABe8G__autoFilterToggle input:checked + span {
+  color: #5865f2;
+}
+
+.dashboard-module__XABe8G__cookieForm {
+  gap: 12px;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__input {
+  color: #fff;
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  border-radius: 10px;
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 14px;
+}
+
+.dashboard-module__XABe8G__input:focus {
+  border-color: #5865f2;
+  outline: none;
+}
+
+.dashboard-module__XABe8G__btnPrimary {
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, #5865f2 0%, #7289da 100%);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .2s;
+}
+
+.dashboard-module__XABe8G__btnPrimary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px #5865f266;
+}
+
+.dashboard-module__XABe8G__btnPrimary:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.dashboard-module__XABe8G__btnFetch {
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, #5865f2 0%, #7289da 100%);
+  border: none;
+  border-radius: 10px;
+  margin-left: auto;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .2s;
+}
+
+.dashboard-module__XABe8G__btnFetch:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.dashboard-module__XABe8G__btnFetch:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.dashboard-module__XABe8G__statsBar {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #161b2280;
+  border: 1px solid #ffffff14;
+  border-radius: 16px;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-module__XABe8G__statsBar:before {
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(135deg, #00d4ff08 0%, #0000 50%, #a855f708 100%);
+  position: absolute;
+  inset: 0;
+}
+
+.dashboard-module__XABe8G__statItem {
+  background: #ffffff08;
+  border: 1px solid #ffffff0f;
+  border-radius: 14px;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+  padding: 16px 28px;
+  transition: all .3s cubic-bezier(.4, 0, .2, 1);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-module__XABe8G__statItem:before {
+  content: "";
+  opacity: 0;
+  background: linear-gradient(90deg, #0000, #5865f280, #0000);
+  height: 2px;
+  transition: opacity .3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.dashboard-module__XABe8G__statItem:hover {
+  background: #ffffff0f;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px #0003;
+}
+
+.dashboard-module__XABe8G__statItem:hover:before {
+  opacity: 1;
+}
+
+.dashboard-module__XABe8G__statValue {
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  transition: all .3s;
+}
+
+.dashboard-module__XABe8G__statLabel {
+  color: #6b6b7b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 8px;
+  font-size: 11px;
+}
+
+.dashboard-module__XABe8G__statSafe .dashboard-module__XABe8G__statValue {
+  color: #43b581;
+  text-shadow: 0 0 25px #43b58180;
+}
+
+.dashboard-module__XABe8G__statSafe:hover {
+  border-color: #43b58166;
+  box-shadow: 0 8px 24px #43b58126;
+}
+
+.dashboard-module__XABe8G__statBot .dashboard-module__XABe8G__statValue {
+  color: #f04747;
+  text-shadow: 0 0 25px #f0474780;
+}
+
+.dashboard-module__XABe8G__statBot:hover {
+  border-color: #f0474766;
+  box-shadow: 0 8px 24px #f0474726;
+}
+
+.dashboard-module__XABe8G__bulkActions {
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__btnAcceptAll {
+  color: #43b581;
+  cursor: pointer;
+  background: #43b5811f;
+  border: 1px solid #43b58140;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.dashboard-module__XABe8G__btnAcceptAll:hover:not(:disabled) {
+  color: #fff;
+  background: linear-gradient(135deg, #43b581 0%, #3ca374 100%);
+  border-color: #0000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px #43b58159;
+}
+
+.dashboard-module__XABe8G__btnAcceptSafe {
+  color: #5865f2;
+  cursor: pointer;
+  background: #5865f21f;
+  border: 1px solid #5865f240;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.dashboard-module__XABe8G__btnAcceptSafe:hover:not(:disabled) {
+  color: #fff;
+  background: linear-gradient(135deg, #5865f2 0%, #7289da 100%);
+  border-color: #0000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px #5865f259;
+}
+
+.dashboard-module__XABe8G__btnDeclineBots {
+  color: #f04747;
+  cursor: pointer;
+  background: #f047471f;
+  border: 1px solid #f0474740;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.dashboard-module__XABe8G__btnDeclineBots:hover:not(:disabled) {
+  color: #fff;
+  background: linear-gradient(135deg, #f04747 0%, #e53e3e 100%);
+  border-color: #0000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px #f0474759;
+}
+
+.dashboard-module__XABe8G__btnAcceptAll:disabled, .dashboard-module__XABe8G__btnAcceptSafe:disabled, .dashboard-module__XABe8G__btnDeclineBots:disabled, .dashboard-module__XABe8G__btnBlockAll:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.dashboard-module__XABe8G__btnBlockAll {
+  color: #faa61a;
+  cursor: pointer;
+  background: #faa61a26;
+  border: 1px solid #faa61a4d;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all .2s;
+}
+
+.dashboard-module__XABe8G__btnBlockAll:hover:not(:disabled) {
+  color: #fff;
+  background: #faa61a;
+}
+
+.dashboard-module__XABe8G__tableWrapper {
+  overflow-x: auto;
+}
+
+.dashboard-module__XABe8G__table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.dashboard-module__XABe8G__table th {
+  text-align: left;
+  color: #6b6b7b;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ffffff0f;
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dashboard-module__XABe8G__table td {
+  color: #e0e0e0;
+  border-bottom: 1px solid #ffffff0a;
+  padding: 14px 16px;
+  font-size: 14px;
+}
+
+.dashboard-module__XABe8G__rowBot {
+  background: #f0474708;
+}
+
+.dashboard-module__XABe8G__rowSafe {
+  background: #43b58105;
+}
+
+.dashboard-module__XABe8G__userCell {
+  align-items: center;
+  gap: 12px;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__robloxAvatar {
+  background: #ffffff1a;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+.dashboard-module__XABe8G__userDetails {
+  flex-direction: column;
+  gap: 2px;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__usernameLink {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.dashboard-module__XABe8G__usernameLink:hover {
+  color: #5865f2;
+}
+
+.dashboard-module__XABe8G__displayName {
+  color: #6b6b7b;
+  font-size: 12px;
+}
+
+.dashboard-module__XABe8G__accountAge {
+  color: #a0a0b0;
+  font-size: 13px;
+}
+
+.dashboard-module__XABe8G__badgeSafe {
+  color: #43b581;
+  background: #43b58126;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+}
+
+.dashboard-module__XABe8G__badgeBot {
+  color: #f04747;
+  background: #f0474726;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+}
+
+.dashboard-module__XABe8G__actionButtons {
+  gap: 8px;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__btnAccept {
+  color: #43b581;
+  cursor: pointer;
+  background: #43b58126;
+  border: 1px solid #43b5814d;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all .2s cubic-bezier(.34, 1.56, .64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-module__XABe8G__btnAccept:hover:not(:disabled) {
+  color: #fff;
+  background: #43b581;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px #43b5814d;
+}
+
+.dashboard-module__XABe8G__btnAccept:active:not(:disabled) {
+  transform: translateY(0)scale(.95);
+}
+
+.dashboard-module__XABe8G__btnDecline {
+  color: #f04747;
+  cursor: pointer;
+  background: #f0474726;
+  border: 1px solid #f047474d;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all .2s cubic-bezier(.34, 1.56, .64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-module__XABe8G__btnDecline:hover:not(:disabled) {
+  color: #fff;
+  background: #f04747;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px #f047474d;
+}
+
+.dashboard-module__XABe8G__btnDecline:active:not(:disabled) {
+  transform: translateY(0)scale(.95);
+}
+
+.dashboard-module__XABe8G__btnAccept:disabled, .dashboard-module__XABe8G__btnDecline:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.dashboard-module__XABe8G__textMuted {
+  color: #6b6b7b;
+  font-size: 13px;
+}
+
+.dashboard-module__XABe8G__logAccountName {
+  color: #5865f2;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.dashboard-module__XABe8G__emptyState {
+  text-align: center;
+  color: #6b6b7b;
+  padding: 40px 0;
+  font-size: 14px;
+}
+
+.dashboard-module__XABe8G__loading, .dashboard-module__XABe8G__loadingState {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 0;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__loadingState p {
+  color: #a0a0b0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dashboard-module__XABe8G__spinner {
+  border: 3px solid #5865f226;
+  border-top-color: #5865f2;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: 1s linear infinite dashboard-module__XABe8G__spinGlow;
+  position: relative;
+}
+
+.dashboard-module__XABe8G__spinner:after {
+  content: "";
+  border: 2px solid #0000;
+  border-bottom-color: #43b581;
+  border-radius: 50%;
+  animation: .6s linear infinite dashboard-module__XABe8G__spinReverse;
+  position: absolute;
+  inset: 4px;
+}
+
+@keyframes dashboard-module__XABe8G__spinGlow {
+  0% {
+    transform: rotate(0);
+    box-shadow: 0 0 10px #5865f24d;
+  }
+
+  50% {
+    box-shadow: 0 0 25px #5865f280;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 0 0 10px #5865f24d;
+  }
+}
+
+@keyframes dashboard-module__XABe8G__spinReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.dashboard-module__XABe8G__progressContainer {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.dashboard-module__XABe8G__progressBar {
+  background: #ffffff1a;
+  border-radius: 10px;
+  width: 100%;
+  height: 8px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px #0000004d;
+}
+
+.dashboard-module__XABe8G__progressFill {
+  background: linear-gradient(90deg, #5865f2, #7289da, #43b581) 0 0 / 200% 100%;
+  border-radius: 10px;
+  height: 100%;
+  transition: width .4s cubic-bezier(.4, 0, .2, 1);
+  animation: 2s infinite dashboard-module__XABe8G__progressGradient;
+  position: relative;
+}
+
+.dashboard-module__XABe8G__progressFill:after {
+  content: "";
+  background: linear-gradient(90deg, #0000, #fff6, #0000);
+  animation: 1.5s ease-in-out infinite dashboard-module__XABe8G__progressShimmer;
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes dashboard-module__XABe8G__progressGradient {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+@keyframes dashboard-module__XABe8G__progressShimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.dashboard-module__XABe8G__progressText {
+  color: #a0a0b0;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 13px;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__progressPhase {
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.dashboard-module__XABe8G__progressPercent {
+  color: #5865f2;
+  font-weight: 600;
+}
+
+.dashboard-module__XABe8G__statusIndicator {
+  border-radius: 20px;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+}
+
+.dashboard-module__XABe8G__statusPending {
+  color: #faa61a;
+  background: #faa61a26;
+}
+
+.dashboard-module__XABe8G__statusPending:before {
+  content: "";
+  background: #faa61a;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  animation: 1.5s ease-in-out infinite dashboard-module__XABe8G__pulse;
+}
+
+.dashboard-module__XABe8G__statusProcessing {
+  color: #5865f2;
+  background: #5865f226;
+}
+
+.dashboard-module__XABe8G__statusProcessing:before {
+  content: "";
+  background: #5865f2;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  animation: .8s ease-in-out infinite dashboard-module__XABe8G__pulse;
+}
+
+.dashboard-module__XABe8G__statusSuccess {
+  color: #43b581;
+  background: #43b58126;
+}
+
+.dashboard-module__XABe8G__statusSuccess:before {
+  content: "";
+  background: #43b581;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+
+.dashboard-module__XABe8G__statusError {
+  color: #f04747;
+  background: #f0474726;
+}
+
+.dashboard-module__XABe8G__statusError:before {
+  content: "";
+  background: #f04747;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  animation: .5s ease-in-out infinite dashboard-module__XABe8G__pulse;
+}
+
+@keyframes dashboard-module__XABe8G__pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .5;
+    transform: scale(1.2);
+  }
+}
+
+.dashboard-module__XABe8G__liveCounter {
+  justify-content: center;
+  gap: 24px;
+  margin: 20px 0;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__counterItem {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #161b22cc;
+  border: 1px solid #ffffff1a;
+  border-radius: 16px;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+  padding: 16px 24px;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__counterValue {
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+  font-size: 32px;
+  font-weight: 700;
+  transition: all .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.dashboard-module__XABe8G__counterValue.dashboard-module__XABe8G__updating {
+  color: #5865f2;
+  transform: scale(1.1);
+}
+
+.dashboard-module__XABe8G__counterLabel {
+  color: #6b6b7b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+.dashboard-module__XABe8G__counterSafe .dashboard-module__XABe8G__counterValue {
+  color: #43b581;
+}
+
+.dashboard-module__XABe8G__counterBot .dashboard-module__XABe8G__counterValue {
+  color: #f04747;
+}
+
+.dashboard-module__XABe8G__filterTabs {
+  background: #161b2299;
+  border-radius: 12px;
+  gap: 8px;
+  width: fit-content;
+  margin-bottom: 16px;
+  padding: 4px;
+  display: flex;
+}
+
+.dashboard-module__XABe8G__filterTab {
+  color: #a0a0b0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all .3s cubic-bezier(.34, 1.56, .64, 1);
+  display: flex;
+}
+
+.dashboard-module__XABe8G__filterTab:hover {
+  color: #fff;
+  background: #ffffff0d;
+}
+
+.dashboard-module__XABe8G__filterTab.dashboard-module__XABe8G__active {
+  color: #5865f2;
+  background: #5865f233;
+}
+
+.dashboard-module__XABe8G__filterTab.dashboard-module__XABe8G__activeSafe {
+  color: #43b581;
+  background: #43b58133;
+}
+
+.dashboard-module__XABe8G__filterTab.dashboard-module__XABe8G__activeBots {
+  color: #f04747;
+  background: #f0474733;
+}
+
+.dashboard-module__XABe8G__filterCount {
+  background: #ffffff1a;
+  border-radius: 10px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.dashboard-module__XABe8G__filterTab.dashboard-module__XABe8G__active .dashboard-module__XABe8G__filterCount, .dashboard-module__XABe8G__filterTab.dashboard-module__XABe8G__activeSafe .dashboard-module__XABe8G__filterCount, .dashboard-module__XABe8G__filterTab.dashboard-module__XABe8G__activeBots .dashboard-module__XABe8G__filterCount {
+  color: #fff;
+  background: currentColor;
+}
+
+@media (max-width: 768px) {
+  .dashboard-module__XABe8G__sectionContent, .dashboard-module__XABe8G__bulkActions, .dashboard-module__XABe8G__statsBar {
+    padding-left: 0;
+  }
+
+  .dashboard-module__XABe8G__cookieForm, .dashboard-module__XABe8G__bulkActions {
+    flex-direction: column;
+  }
+
+  .dashboard-module__XABe8G__statsBar {
+    flex-wrap: wrap;
+  }
+
+  .dashboard-module__XABe8G__filterTabs {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+.dashboard-module__XABe8G__settingsGrid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  display: grid;
+}
+
+.dashboard-module__XABe8G__settingsCard {
+  background: #ffffff05;
+  border: 1px solid #ffffff0f;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.dashboard-module__XABe8G__settingsCard h3 {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .dashboard-module__XABe8G__settingsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=src_app_dashboard_dashboard_module_f89138fb.css.map*/

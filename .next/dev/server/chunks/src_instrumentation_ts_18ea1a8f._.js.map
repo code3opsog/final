@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/stashy/Desktop/Projects/Trend/src/instrumentation.ts"],"sourcesContent":["/**\r\n * Next.js Instrumentation\r\n * This file is automatically loaded by Next.js on server startup\r\n * Used to initialize background workers and monitoring\r\n */\r\n\r\nexport async function register() {\r\n    // Only run on server side\r\n    if (process.env.NEXT_RUNTIME === 'nodejs') {\r\n        console.log('[Instrumentation] Registering server-side hooks...');\r\n\r\n        // Dynamically import to avoid issues with Edge runtime\r\n        const { initAutoFilterWorker } = await import('./lib/auto-filter-worker');\r\n\r\n        // Initialize the auto-filter background worker\r\n        initAutoFilterWorker();\r\n\r\n        console.log('[Instrumentation] Server-side initialization complete');\r\n    }\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;CAIC;;;;AAEM,eAAe;IAClB,0BAA0B;IAC1B,wCAA2C;QACvC,QAAQ,GAAG,CAAC;QAEZ,uDAAuD;QACvD,MAAM,EAAE,oBAAoB,EAAE,GAAG;QAEjC,+CAA+C;QAC/C;QAEA,QAAQ,GAAG,CAAC;IAChB;AACJ"}}]
+}

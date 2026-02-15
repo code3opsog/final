@@ -1,0 +1,3 @@
+{
+  "/api/cron/auto-fetch/route": "app/api/cron/auto-fetch/route.js"
+}

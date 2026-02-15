@@ -1,0 +1,3 @@
+{
+  "/api/accounts/[id]/auto-filter/route": "app/api/accounts/[id]/auto-filter/route.js"
+}

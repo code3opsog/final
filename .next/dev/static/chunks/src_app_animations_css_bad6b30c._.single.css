@@ -1,0 +1,542 @@
+/* [project]/src/app/animations.css [app-client] (css) */
+:root {
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+  --ease-bounce: cubic-bezier(.68, -.55, .265, 1.55);
+  --ease-smooth: cubic-bezier(.4, 0, .2, 1);
+  --ease-out-expo: cubic-bezier(.19, 1, .22, 1);
+  --ease-in-out-back: cubic-bezier(.68, -.6, .32, 1.6);
+  --stagger-1: 0s;
+  --stagger-2: 50ms;
+  --stagger-3: .1s;
+  --stagger-4: .15s;
+  --stagger-5: .2s;
+  --stagger-6: .25s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBlur {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur();
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rowSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(.9)translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)translateY(0);
+  }
+}
+
+@keyframes toastSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%)scale(.8);
+  }
+
+  60% {
+    transform: translateX(-5%)scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0)scale(1);
+  }
+}
+
+@keyframes toastSlideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(.97);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ripple {
+  to {
+    opacity: 0;
+    transform: scale(4);
+  }
+}
+
+@keyframes countPop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-6px);
+  }
+
+  40% {
+    transform: translateX(6px);
+  }
+
+  60% {
+    transform: translateX(-4px);
+  }
+
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px #5865f24d;
+  }
+
+  50% {
+    box-shadow: 0 0 35px #5865f280;
+  }
+}
+
+@keyframes checkBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes progressFlow {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+@keyframes spinGlow {
+  0% {
+    filter: drop-shadow(0 0 5px #5865f280);
+    transform: rotate(0);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 15px #5865f2cc);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 5px #5865f280);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0)translateX(0);
+  }
+
+  25% {
+    transform: translateY(-10px)translateX(5px);
+  }
+
+  50% {
+    transform: translateY(-5px)translateX(-5px);
+  }
+
+  75% {
+    transform: translateY(-15px)translateX(3px);
+  }
+}
+
+@keyframes orbFloat {
+  0%, 100% {
+    transform: translate(0)scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -30px)scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px)scale(.9);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 100%;
+  }
+}
+
+@keyframes shineSweep {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: #5865f24d;
+  }
+
+  50% {
+    border-color: #5865f299;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp .5s var(--ease-smooth) forwards;
+}
+
+.animate-fade-in-blur {
+  animation: fadeInBlur .6s var(--ease-smooth) forwards;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale .4s var(--ease-spring) forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft .4s var(--ease-smooth) forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight .4s var(--ease-smooth) forwards;
+}
+
+.animate-shake {
+  animation: shake .4s var(--ease-smooth);
+}
+
+.animate-bounce {
+  animation: bounce .5s var(--ease-spring);
+}
+
+.stagger-1 {
+  animation-delay: var(--stagger-1);
+}
+
+.stagger-2 {
+  animation-delay: var(--stagger-2);
+}
+
+.stagger-3 {
+  animation-delay: var(--stagger-3);
+}
+
+.stagger-4 {
+  animation-delay: var(--stagger-4);
+}
+
+.stagger-5 {
+  animation-delay: var(--stagger-5);
+}
+
+.stagger-6 {
+  animation-delay: var(--stagger-6);
+}
+
+.animate-stagger-item {
+  opacity: 0;
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px #00d4ff80);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 20px #00d4ffcc) drop-shadow(0 0 40px #a855f780);
+  }
+}
+
+@keyframes neonCycle {
+  0%, 100% {
+    box-shadow: 0 0 20px #00d4ff80;
+  }
+
+  33% {
+    box-shadow: 0 0 20px #a855f780;
+  }
+
+  66% {
+    box-shadow: 0 0 20px #ec489980;
+  }
+}
+
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes floatRotate {
+  0%, 100% {
+    transform: translateY(0)rotate(0);
+  }
+
+  25% {
+    transform: translateY(-5px)rotate(1deg);
+  }
+
+  50% {
+    transform: translateY(-10px)rotate(0);
+  }
+
+  75% {
+    transform: translateY(-5px)rotate(-1deg);
+  }
+}
+
+@keyframes borderTravel {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 200%;
+  }
+}
+
+@keyframes cursorBlink {
+  0%, 50% {
+    border-color: #0000;
+  }
+
+  51%, 100% {
+    border-color: currentColor;
+  }
+}
+
+@keyframes scalePop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rainbowBorder {
+  0% {
+    border-color: #00d4ff80;
+  }
+
+  25% {
+    border-color: #5865f280;
+  }
+
+  50% {
+    border-color: #a855f780;
+  }
+
+  75% {
+    border-color: #ec489980;
+  }
+
+  100% {
+    border-color: #00d4ff80;
+  }
+}
+
+.animate-neon-pulse {
+  animation: 2s ease-in-out infinite neonPulse;
+}
+
+.animate-neon-cycle {
+  animation: 3s ease-in-out infinite neonCycle;
+}
+
+.animate-float {
+  animation: 3s ease-in-out infinite floatUp;
+}
+
+.animate-float-rotate {
+  animation: 4s ease-in-out infinite floatRotate;
+}
+
+.animate-border-travel {
+  background-size: 200% 100%;
+  animation: 3s linear infinite borderTravel;
+}
+
+.animate-scale-pop {
+  animation: .4s cubic-bezier(.34, 1.56, .64, 1) scalePop;
+}
+
+.animate-rainbow-border {
+  animation: 4s infinite rainbowBorder;
+}
+
+.hover-float:hover {
+  animation: .4s floatUp;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px #5865f266;
+}
+
+.hover-neon:hover {
+  box-shadow: 0 0 20px #00d4ff66, 0 0 40px #a855f74d;
+}
+
+/*# sourceMappingURL=src_app_animations_css_bad6b30c._.single.css.map*/
